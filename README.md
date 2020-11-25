@@ -1,6 +1,41 @@
-# Apollo Bookstore Server
+# Apollo GraphQL conflicting types example (BookStore)
+## interface-type example
 
-Apollo based bookstore server.
+See README.md in the master branch for detailed explanation of the problem.
+This branch contains the following solution:
+
+The book contains a _Review_ which is a union type and either a _WebReview_ or a _PollReview_. 
+The _WebReview_ provides a _value_ of type _String_ and the _PollReview_ provides a value of type _Float_.
+
+This query fails:
+
+```
+query {
+  books {
+    name
+    review {
+      ... on WebReview {
+        origin
+        user
+     	value
+      }
+      ... on PollReview {
+        origin
+        value
+
+      }
+    }
+  }
+}
+```
+
+This is the error:
+
+```
+Fields "value" conflict because they return conflicting types String and Float. Use different aliases on the fields to fetch both if this was intentional.
+```
+
+See branch **union-type-solution** for a possible fix.
 
 ## Dev Build
 
