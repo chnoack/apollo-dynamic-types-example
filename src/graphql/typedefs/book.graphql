@@ -1,0 +1,24 @@
+type WebReview {
+    user: String
+    value: String
+    origin: String
+}
+
+type PollReview {
+    value: Float
+    origin: String
+}
+
+union Review = PollReview | WebReview
+
+
+type Book {
+    id: ID!
+    name: String!
+    review: Review
+}
+
+type Query {
+    books: [Book!]!
+    book(id: ID!): Book!
+}
