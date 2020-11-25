@@ -20,6 +20,13 @@ export default {
             }
             return null;
         },
-    }
+    },
+    WebReview: {
+        value_string: (obj: any) => obj.value,
+        review_type: (obj: any) => "string"
+    },
+    PollReview: {
+        value_float: (obj: any) => obj.value,
+        review_type: (obj: any) => "float"
+    },
 };
-

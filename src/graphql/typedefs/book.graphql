@@ -1,12 +1,14 @@
 type WebReview {
     user: String
-    value: String
+    value_string: String
     origin: String
+    review_type: String
 }
 
 type PollReview {
-    value: Float
+    value_float: Float
     origin: String
+    review_type: String
 }
 
 union Review = PollReview | WebReview
