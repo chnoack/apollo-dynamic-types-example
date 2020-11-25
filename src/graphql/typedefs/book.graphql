@@ -1,6 +1,6 @@
 type WebReview {
-    user: String
     value: String
+    user: String
     origin: String
 }
 
