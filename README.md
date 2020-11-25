@@ -32,21 +32,25 @@ the Apollo API.
 If you query for books you then should either get a _PollReview_ or a _WebReview_ inside the _review_ slot of the _Book_.
 Both should contain a _value_ attribute inside the review.
 
+## Approaches (failing)
+
 How can this be implemented in ApolloServer and queried? I've tried several approaches:
 
-* union type: see branch _union-type_  of this project
-* interface type: branch see _interface-type_ of this project
+* union type: see branch **union-type** of this project
+* interface type: branch see **interface-type** of this project
 
 Both approaches fail when querying for books: 
 
 ``Fields "value" conflict because they return conflicting types String and Float. Use different aliases on the
 fields to fetch both if this was intentional._``
 
+## Solution (working)
+
 I found three different solutions to this - all of them not very nice, but working.
 
-* see branch _union-type-solution_
-* see branch _interface-type-solution_
-* see branch _always-string-solution_
+* see branch **union-type-solution**
+* see branch **interface-type-solution**
+* see branch **always-string-solution**
 
 ## Dev Build
 
