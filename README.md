@@ -1,4 +1,4 @@
-# Apollo GraphQL conflicting types example
+# Apollo GraphQL conflicting types example (BookStore)
 
 Imagine we have a book store service whose only functionality is to provide a list of books with their attributes 
 depending on a query. We have a very simple Book model here just containing:
@@ -21,20 +21,32 @@ query {
 `` 
 
 Now we want to change the functionality: a review can either be a 
-* _PollReview_ that contains a float value, or a
-* _WebReivew_ that contains a string value and the name of the user who wrote the review
+* Poll Review that contains a float value, or a
+* Web Review_that contains a string value and the name of the user who wrote the review.
 
-If you query for books you either get a _PollReview_ or a _WebReview_ inside the _review_ slot of the _Book_.
+We can imagine other types also. This should be just a simple example of return values that might 
+have different types in the same slot/attribute. This might happen when you want to visualize generic data
+coming from a backend service.  Here we have a clash between dynamic types from the backend and static types in
+the Apollo API.
+
+If you query for books you then should either get a _PollReview_ or a _WebReview_ inside the _review_ slot of the _Book_.
+Both should contain a _value_ attribute inside the review.
+
 How can this be implemented in ApolloServer and queried? I've tried several approaches:
 
-* union type: see _union-type_ branch of this project
-* interface type: see _interface-type_ branch of this project
+* union type: see branch _union-type_  of this project
+* interface type: branch see _interface-type_ of this project
 
 Both approaches fail when querying for books: 
 
-_Fields "value" conflict because they return conflicting types String and Float. Use different aliases on the
-fields to fetch both if this was intentional._
+``Fields "value" conflict because they return conflicting types String and Float. Use different aliases on the
+fields to fetch both if this was intentional._``
 
+I found three different solutions to this - all of them not very nice, but working.
+
+* see branch _union-type-solution_
+* see branch _interface-type-solution_
+* see branch _always-string-solution_
 
 ## Dev Build
 
