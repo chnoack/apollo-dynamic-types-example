@@ -1,7 +1,4 @@
 import { dataSources } from '../../datasources';
-import { pubsub } from '../pubsub';
-
-const BOOK_MUTATED = 'bookMutated';
 
 export default {
     Query: {
