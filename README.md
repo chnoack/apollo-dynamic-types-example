@@ -35,7 +35,7 @@ This is the error:
 Fields "value" conflict because they return conflicting types String and Float. Use different aliases on the fields to fetch both if this was intentional.
 ```
 
-See branch **union-type-solution** for a possible fix.
+See branch **interface-type-solution** for a possible fix.
 
 ## Dev Build
 
