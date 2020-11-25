@@ -66,7 +66,7 @@ let books = [
         review: {
             origin: "Web",
             value: "TLDR",
-            user: "Jim123"
+            user: "Roy"
         }
     },
     {
@@ -76,7 +76,7 @@ let books = [
         review: {
             origin: "Web",
             value: "Love it",
-            user: "Lisa"
+            user: "Sigfried"
         }
     }
 ];

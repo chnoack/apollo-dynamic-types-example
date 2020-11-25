@@ -1,15 +1,17 @@
-type WebReview {
+type WebReview implements  Review {
     user: String
     value: String
     origin: String
 }
 
-type PollReview {
+type PollReview implements  Review {
     value: Float
     origin: String
 }
 
-union Review = PollReview | WebReview
+interface Review {
+    origin: String
+}
 
 
 type Book {
