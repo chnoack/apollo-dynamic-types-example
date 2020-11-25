@@ -5,12 +5,13 @@ query {
       ... on WebReview {
         origin
         user
-     	value
+        review_type
+        value_string
       }
       ... on PollReview {
         origin
-        value
-
+        review_type
+        value_float
       }
     }
   }
