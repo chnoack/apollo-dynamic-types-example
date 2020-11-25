@@ -1,19 +1,9 @@
-type WebReview implements Review {
-    value_string: String
-    review_type: String
+
+type Review {
     origin: String
+    review_type: String!
+    value: String!
     user: String
-}
-
-type PollReview implements Review {
-    value_float: Float
-    review_type: String
-    origin: String
-}
-
-interface Review {
-    origin: String
-    review_type: String
 }
 
 type Book {

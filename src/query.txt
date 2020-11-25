@@ -2,17 +2,10 @@ query {
   books {
     name
     review {
-      ... on WebReview {
-        origin
-        user
-        review_type
-        value_string
-      }
-      ... on PollReview {
-        origin
-        review_type
-        value_float
-      }
+      origin
+      user
+      review_type
+      value
     }
   }
 }

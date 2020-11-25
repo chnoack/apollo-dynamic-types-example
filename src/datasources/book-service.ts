@@ -74,8 +74,8 @@ let books = [
         name: 'Agile Software Development, Principles, Patterns, and Practices',
         publisherId: 'pearson',
         review: {
-            origin: "Web",
-            value: "Love it",
+            origin: "NewsLetter",
+            value: true,
             user: "Lisa"
         }
     }
