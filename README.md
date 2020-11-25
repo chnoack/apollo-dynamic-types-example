@@ -1,9 +1,10 @@
-# Apollo Bookstore Server
+# Apollo GraphQL conflicting types example (BookStore)
+## all-values-are-strings solution
 
 See README.md in the master branch for detailed explanation of the problem.
 This branch contains the following solution:
 
-* there is just on Review type 
+* there is just one Review type 
 * the value is always of type string
 * the review contains information about the original type
 * the client has to handle the different types
