@@ -32,8 +32,8 @@ How can this be implemented in ApolloServer and queried? I've tried several appr
 
 Both approaches fail when querying for books: 
 
-
-
+_Fields "value" conflict because they return conflicting types String and Float. Use different aliases on the
+fields to fetch both if this was intentional._
 
 
 ## Dev Build
